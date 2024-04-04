@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "00d92f63-8caf-4271-9592-8ac361cb393d",
+		"name": "Google Maps Geocoding API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31249445"
+	},
+	"item": [
+		{
+			"name": "Valid Address",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/geocode/json?address=Dhaka,Bangladesh&key={{API_KEY}}",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"geocode",
+						"json"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "Dhaka,Bangladesh"
+						},
+						{
+							"key": "key",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "city",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Location and Radius",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=23.780356,90.377641&radius=500&types=restaurant&key={{API_KEY}}",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"nearbysearch",
+						"json"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "23.780356,90.377641"
+						},
+						{
+							"key": "radius",
+							"value": "500"
+						},
+						{
+							"key": "types",
+							"value": "restaurant"
+						},
+						{
+							"key": "key",
+							"value": "{{API_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Missing Location Parameter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/geocode/json?redius=500&types=resturent&key={{API_KEY}}",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"geocode",
+						"json"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "23.780356,90.377641",
+							"disabled": true
+						},
+						{
+							"key": "redius",
+							"value": "500"
+						},
+						{
+							"key": "types",
+							"value": "resturent"
+						},
+						{
+							"key": "key",
+							"value": "{{API_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
