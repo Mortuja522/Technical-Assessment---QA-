@@ -1,6 +1,6 @@
 # Google Maps API
 
-![Google Maps API Report-Newman](Report.PNG)
+![Google Maps API Report-Newman] (Report.PNG)
 
 This repository contains the test plan, test cases, testing checklist, and example tests for validating the Google Maps API endpoints, specifically focusing on geocoding and nearby search functionalities.
 
